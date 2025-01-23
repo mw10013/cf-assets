@@ -1,22 +1,25 @@
 {
-  "name": "cf-assets",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "start": "wrangler dev",
-    "test": "vitest",
-    "cf-typegen": "wrangler types"
-  },
-  "devDependencies": {
-    "@cloudflare/vitest-pool-workers": "^0.6.4",
-    "@cloudflare/workers-types": "^4.20250121.0",
-    "typescript": "^5.5.2",
-    "vitest": "2.1.8",
-    "wrangler": "^3.105.0"
-  },
-  "dependencies": {
-    "hono": "^4.6.18"
-  }
+	"name": "cf-assets",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"cf-typegen": "wrangler types",
+		"tailwind": "tailwindcss -i src/tailwind.css -o public/tailwind.css --watch"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.6.4",
+		"@cloudflare/workers-types": "^4.20250121.0",
+		"@tailwindcss/cli": "^4.0.0",
+		"tailwindcss": "^4.0.0",
+		"typescript": "^5.5.2",
+		"vitest": "2.1.8",
+		"wrangler": "^3.105.0"
+	},
+	"dependencies": {
+		"hono": "^4.6.18"
+	}
 }
