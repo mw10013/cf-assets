@@ -11,16 +11,13 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
+import { Hono } from 'hono';
+
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
-		const url = new URL(request.url);
-		switch (url.pathname) {
-			case '/message':
-				return new Response('Hello, World!!');
-			case '/random':
-				return new Response(crypto.randomUUID());
-			default:
-				return new Response('Not Found', { status: 404 });
-		}
+		const app = new Hono();
+		app.get('/message', (c) => c.text('Hello, World!'));
+		app.get('/random', (c) => c.text(crypto.randomUUID()));
+		return app.fetch(request, env, ctx);
 	},
 } satisfies ExportedHandler<Env>;
