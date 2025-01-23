@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -8,25 +8,25 @@
 	</head>
 	<body class="p-6">
 		<h1 id="heading" class="text-purple-500"></h1>
-		<button id="button" class="border p-1 rounded-sm">Fetch a random UUID</button>
+		<button id="button" class="rounded-sm border p-1">Fetch a random UUID</button>
 		<div id="random"></div>
 		<script>
 			fetch('/message')
 				.then((resp) => resp.text())
 				.then((text) => {
-					const h1 = document.getElementById('heading');
-					h1.textContent = text;
-				});
+					const h1 = document.getElementById('heading')
+					h1.textContent = text
+				})
 
-			const button = document.getElementById('button');
+			const button = document.getElementById('button')
 			button.addEventListener('click', () => {
 				fetch('/random')
 					.then((resp) => resp.text())
 					.then((text) => {
-						const random = document.getElementById('random');
-						random.textContent = text;
-					});
-			});
+						const random = document.getElementById('random')
+						random.textContent = text
+					})
+			})
 		</script>
 	</body>
 </html>

@@ -11,13 +11,13 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
-import { Hono } from 'hono';
+import { Hono } from 'hono'
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
-		const app = new Hono();
-		app.get('/message', (c) => c.text('Hello, World!'));
-		app.get('/random', (c) => c.text(crypto.randomUUID()));
-		return app.fetch(request, env, ctx);
+		const app = new Hono()
+		app.get('/message', (c) => c.text('Hello, World!'))
+		app.get('/random', (c) => c.text(crypto.randomUUID()))
+		return app.fetch(request, env, ctx)
 	},
-} satisfies ExportedHandler<Env>;
+} satisfies ExportedHandler<Env>
