@@ -9,7 +9,7 @@
 		"test": "vitest",
 		"cf-typegen": "wrangler types",
 		"tailwind": "tailwindcss -i src/tailwind.css -o public/tailwind.css --watch",
-    "build": "tailwindcss -i src/tailwind.css -o public/tailwind.css"
+		"build": "tailwindcss -i src/tailwind.css -o public/tailwind.css"
 	},
 	"devDependencies": {
 		"@cloudflare/vitest-pool-workers": "^0.6.4",
@@ -22,5 +22,9 @@
 	},
 	"dependencies": {
 		"hono": "^4.6.18"
+	},
+	"engines": {
+		"node": ">=22.4.0",
+		"pnpm": "~9.6.0"
 	}
 }
