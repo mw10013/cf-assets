@@ -8,7 +8,8 @@
 		"start": "wrangler dev",
 		"test": "vitest",
 		"cf-typegen": "wrangler types",
-		"tailwind": "tailwindcss -i src/tailwind.css -o public/tailwind.css --watch"
+		"tailwind": "tailwindcss -i src/tailwind.css -o public/tailwind.css --watch",
+    "build": "tailwindcss -i src/tailwind.css -o public/tailwind.css"
 	},
 	"devDependencies": {
 		"@cloudflare/vitest-pool-workers": "^0.6.4",
