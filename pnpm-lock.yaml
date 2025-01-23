@@ -24,6 +24,9 @@ importers:
       '@tailwindcss/cli':
         specifier: ^4.0.0
         version: 4.0.0
+      daisyui:
+        specifier: 5.0.0-beta.2
+        version: 5.0.0-beta.2
       prettier:
         specifier: ^3.4.2
         version: 3.4.2
@@ -776,6 +779,9 @@ packages:
   cookie@0.7.2:
     resolution: {integrity: sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==}
     engines: {node: '>= 0.6'}
+
+  daisyui@5.0.0-beta.2:
+    resolution: {integrity: sha512-H1gXtcQhjcKze3UBq23dJUyKYIxHrVIKb6XtDfnSh6Ft4d0BMfPOwuvzIsuEe5PkbBm9kZH0ny+aQqiDosqpPQ==}
 
   data-uri-to-buffer@2.0.2:
     resolution: {integrity: sha512-ND9qDTLc6diwj+Xe5cdAgVTbLVdXbtxTJRXRhli8Mowuaan+0EJOtdqJ0QCHNSSPyoXGx9HX2/VMnKeC34AChA==}
@@ -1823,6 +1829,8 @@ snapshots:
   confbox@0.1.8: {}
 
   cookie@0.7.2: {}
+
+  daisyui@5.0.0-beta.2: {}
 
   data-uri-to-buffer@2.0.2: {}
 
