@@ -18,12 +18,14 @@ const Layout: FC<PropsWithChildren<{}>> = (props) => {
 const Top: FC<{ messages: string[] }> = (props) => {
 	return (
 		<Layout>
-			<h1>Hello Hono!</h1>
-			<ul>
-				{props.messages.map((message) => {
-					return <li>{message}!!</li>
-				})}
-			</ul>
+			<div className="container prose p-6 lg:prose-xl dark:prose-invert">
+				<h1>Hello Hono!</h1>
+				<ul>
+					{props.messages.map((message) => {
+						return <li>{message}!!</li>
+					})}
+				</ul>
+			</div>
 		</Layout>
 	)
 }
